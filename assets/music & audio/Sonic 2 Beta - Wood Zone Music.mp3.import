@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://phcs61nujy2d"
+path="res://.godot/imported/Sonic 2 Beta - Wood Zone Music.mp3-ea65cb754d4e2c2ec8512bcf66f8ec65.mp3str"
+
+[deps]
+
+source_file="res://assets/music & audio/Sonic 2 Beta - Wood Zone Music.mp3"
+dest_files=["res://.godot/imported/Sonic 2 Beta - Wood Zone Music.mp3-ea65cb754d4e2c2ec8512bcf66f8ec65.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

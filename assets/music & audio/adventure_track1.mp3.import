@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dmkpoyug3jpm0"
+path="res://.godot/imported/adventure_track1.mp3-53f516c0c0dae2404e1a55b05ac92081.mp3str"
+
+[deps]
+
+source_file="res://assets/music & audio/adventure_track1.mp3"
+dest_files=["res://.godot/imported/adventure_track1.mp3-53f516c0c0dae2404e1a55b05ac92081.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://cpmqvbxulve6j"]
+
+[ext_resource type="Texture2D" uid="uid://bbsx1tytconqn" path="res://assets/sprites/green_sprite.png" id="1_8alew"]
+[ext_resource type="Script" uid="uid://cwtbuxig0lwfe" path="res://scenes/soda.gd" id="1_fy4ic"]
+[ext_resource type="AudioStream" uid="uid://dnes1tvlhy8r8" path="res://assets/music & audio/pickup.wav" id="3_nksmf"]
+
+[sub_resource type="Animation" id="Animation_fy4ic"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_nksmf"]
+resource_name = "float"
+length = 6.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3, 6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -8), Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_uc6t3"]
+_data = {
+&"RESET": SubResource("Animation_fy4ic"),
+&"float": SubResource("Animation_nksmf")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s7wsd"]
+size = Vector2(5, 9.5)
+
+[node name="Soda" type="Area2D" unique_id=229511682]
+script = ExtResource("1_fy4ic")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1587781997]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_8alew")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D" unique_id=1119251943]
+libraries/ = SubResource("AnimationLibrary_uc6t3")
+autoplay = &"float"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=783187002]
+position = Vector2(0, -4)
+shape = SubResource("RectangleShape2D_s7wsd")
+
+[node name="Pickup" type="AudioStreamPlayer" parent="." unique_id=204922040]
+stream = ExtResource("3_nksmf")
+volume_db = -20.0
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

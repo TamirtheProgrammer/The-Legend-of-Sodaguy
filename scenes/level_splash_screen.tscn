@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://b2qc4ebcijhk4"]
+
+[ext_resource type="Texture2D" uid="uid://c1p2vio0jsd1p" path="res://assets/sprites/black_background.png" id="1_1dlf3"]
+[ext_resource type="FontFile" uid="uid://dayoyea7rwn0q" path="res://assets/Star Crush.ttf" id="2_8fj3j"]
+[ext_resource type="Script" uid="uid://nip2qhghpjpd" path="res://scripts/level_splash_screen.gd" id="2_j5yee"]
+[ext_resource type="FontFile" uid="uid://ts8rb5vdgas6" path="res://assets/ARCADECLASSIC.TTF" id="3_j5yee"]
+[ext_resource type="Texture2D" uid="uid://doirt7hpnqqan" path="res://assets/sprites/Dude_Monster.png" id="4_8fj3j"]
+
+[node name="Level Splash Screen" type="Sprite2D" unique_id=404169210]
+position = Vector2(569, 276)
+texture = ExtResource("1_1dlf3")
+script = ExtResource("2_j5yee")
+
+[node name="TITLE" type="Node" parent="." unique_id=1097589234]
+
+[node name="Label" type="Label" parent="TITLE" unique_id=812110552]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -164.5
+offset_top = -78.5
+offset_right = 150.5
+offset_bottom = -17.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_8fj3j")
+theme_override_font_sizes/font_size = 64
+text = "TEST LEVEL"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="TITLE" unique_id=1241487602]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -181.0
+offset_top = -3.0
+offset_right = 173.0
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_j5yee")
+theme_override_font_sizes/font_size = 32
+text = "TRY TO GET ALL SODA CANS"
+metadata/_edit_use_anchors_ = true
+
+[node name="DudeMonster" type="Sprite2D" parent="TITLE" unique_id=442027339]
+position = Vector2(570, 409)
+scale = Vector2(1.65625, 1.65625)
+texture = ExtResource("4_8fj3j")
